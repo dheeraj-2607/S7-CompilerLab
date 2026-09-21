@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <string.h>
+char table[7][7] = {
+{' ','>','>','>','>','>','>'},
+{'<','>','>','<','<','<','>'},
+{'<','>','>','<','<','<','>'},
+{'<','>','>','>','>','<','>'},
+{'<','>','>','>','>','<','>'},
+{'<','>','>','>','>','<','>'},
+{'<','<','<','<','<','<',' '}
+};
+char *rule[]={"i","E+E","E-E","E*E","E/E","E^E"};
+char st[50];
+int top=-1;
+int pos(char c){
+    if(c=='i') return 0;
+    if(c=='+') return 1;
+    if(c=='-') return 2;
+    if(c=='*') return 3;
+    if(c=='/') return 4;
+    if(c=='^') return 5;
+    if(c=='$') return 6;
+    return -1;
+}
+char c[7] = {'i','+','-','*','/','^','$'}; 
+char topTerminal(){
+    for(int i=top;i>=0;i--)
+        if(st[i]!='E') return st[i];
+    return '$';
+}
+void showStack(){
+    for(int i=0;i<=top;i++)
+        printf("%c",st[i]);
+}
+
+int valid(char h[]){
+    for(int i=0;i<6;i++)
+        if(strcmp(h,rule[i])==0)
+            return 1;
+    return 0;
+}
+int main(){
+    char in[50],handle[20];
+    int ip=0,boundary,last,row,col,len;
+
+    printf("I am Dheeraj A G. Here is my OP parser output\n");
+    printf("Enter expression: ");
+    scanf("%s",in);
+
+    strcat(in,"$");
+
+    st[++top]='$';
+
+    printf("\n operator precedence table\n");
+    printf("\n");
+    printf("  \ti\t  +\t  -\t  *\t  /\t  ^\t  $\n");
+    for(int i=0;i<7;i++){
+        printf("%c \t",c[i]);
+        for(int j=0;j<7;j++)
+            printf("%c\t",table[i][j]);
+        printf("\n");
+    }
+
+    printf("\n%-12s%-12s%s\n","stack","input","action");
+
+    while(1){
+        char a=topTerminal();
+        char b=in[ip];
+
+        if(top==1 && st[0]=='$' && st[1]=='E' && b=='$'){
+            showStack();
+            printf("\t\t%s\t\taccept\n",in+ip);
+            break;
+        }
+        row=pos(a);
+        col=pos(b);
+        if(table[row][col]=='<' || table[row][col]=='='){
+            showStack();
+            printf("\t\t%s\t\tshift %c\n",in+ip,b);
+            st[++top]=b;
+            ip++;
+        }
+        else if(table[row][col]=='>'){
+            last=-1;
+            boundary=-1;
+            for(int i=top;i>=0;i--){
+                if(st[i]!='E'){
+                    if(last!=-1){
+                        if(table[pos(st[i])][pos(st[last])]=='<'){
+                            boundary=i;
+                            break;
+                        }
+                    }
+                    last=i;
+                }
+            }
+            len=0;
+            for(int i=boundary+1;i<=top;i++)
+                handle[len++]=st[i];
+            handle[len]='\0';
+            showStack();
+            printf("\t\t%s\t\treduce %s\n",in+ip,handle);
+            if(!valid(handle)){
+                printf("\trejected\n");
+                return 0;
+            }
+            top=boundary;
+            st[++top]='E';
+        }
+        else{
+            printf("\trejected\n");
+            return 0;
+        }
+    }
+    return 0;
+}
