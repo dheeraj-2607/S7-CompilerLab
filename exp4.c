@@ -1,7 +1,5 @@
 #include<stdio.h>
-
 #include<string.h>
-
 #include<ctype.h>
 
 char input[10];
@@ -9,6 +7,7 @@ size_t i;
 int error;
 void E();
 void T();
+
 void Eprime();
 void Tprime();
 void F();
