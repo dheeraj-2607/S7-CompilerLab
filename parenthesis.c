@@ -22,9 +22,7 @@ StackItem pop(void) {
 void push(char val, int lineNo) {
     if (top == MAX - 1) {
         printf("Stack Overflow\n");
-        return;
-    }
-    stack[++top].ch = val;
+        return;op].ch = val;
     stack[top].line = lineNo;
 }
 

@@ -7,7 +7,7 @@
 %}
 %token NUMBER
 %%
-S: E '\n' { printf("%d\n", $1); }
+S: E '\n' { printf("Result = %d\n", $1); }
 ;
 E: E '+' T { $$ = $1 + $3; }
  | T       { $$ = $1; }

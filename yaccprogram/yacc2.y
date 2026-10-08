@@ -52,14 +52,12 @@ F: NUMBER { $$ = $1; }
  | '(' E ')' { $$ = $2; }
 ;
 %%
-int main(void)
-{
+int main(void){
     printf("Enter an expression: ");
     return yyparse();
 }
 
-int yylex(void)
-{
+int yylex(void){
     int ch = getchar();
 
     if (ch != EOF && isdigit((unsigned char) ch)) {
@@ -71,16 +69,14 @@ int yylex(void)
     return ch;
 }
 
-int yyerror(const char *message)
-{
+int yyerror(const char *message){
     (void) message;
     printf("Invalid expression!\n");
     error = 1;
     return 0;
 }
 
-int power(int base, int exponent)
-{
+int power(int base, int exponent){
     int result = 1;
 
     while (exponent > 0) {

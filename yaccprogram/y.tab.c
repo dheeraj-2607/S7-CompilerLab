@@ -1,7 +1,7 @@
 #define YY_parse_h_included
 /*#define YY_USE_CLASS 
 */
-/*  A Bison++ parser, made from yacc2.y  */
+/*  A Bison++ parser, made from yacc3.y  */
 
  /* with Bison++ version bison++ Version 1.21.9-1, adapted from GNU bison by coetmeur@icdc.fr
 Maintained by Magnus Ekdahl <magnus@debian.org>
@@ -98,16 +98,14 @@ Maintained by Magnus Ekdahl <magnus@debian.org>
 #define YYBISON 1  
 
  #line 88 "/usr/share/bison++/bison.cc"
-#line 1 "yacc2.y"
+#line 1 "yacc3.y"
 
-    #include <stdio.h>
-    #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
-    int error = 0;
-
-    int yylex(void);
-    int yyerror(const char *message);
-    int power(int base, int exponent);
+int yylex(void);
+int yyerror(char *s);
 
 #line 88 "/usr/share/bison++/bison.cc"
 /* %{ and %header{ and %union, during decl */
@@ -309,7 +307,8 @@ typedef
 /* TOKEN C */
 
  #line 263 "/usr/share/bison++/bison.cc"
-#define	NUMBER	258
+#define	LETTER	258
+#define	DIGIT	259
 
 
 #line 263 "/usr/share/bison++/bison.cc"
@@ -359,7 +358,8 @@ public:
 /* static const int token ... */
 
  #line 307 "/usr/share/bison++/bison.cc"
-static const int NUMBER;
+static const int LETTER;
+static const int DIGIT;
 
 
 #line 307 "/usr/share/bison++/bison.cc"
@@ -368,7 +368,8 @@ static const int NUMBER;
 enum YY_parse_ENUM_TOKEN { YY_parse_NULL_TOKEN=0
 
  #line 310 "/usr/share/bison++/bison.cc"
-	,NUMBER=258
+	,LETTER=258
+	,DIGIT=259
 
 
 #line 310 "/usr/share/bison++/bison.cc"
@@ -405,7 +406,8 @@ public:
 #if YY_parse_USE_CONST_TOKEN != 0
 
  #line 341 "/usr/share/bison++/bison.cc"
-const int YY_parse_CLASS::NUMBER=258;
+const int YY_parse_CLASS::LETTER=258;
+const int YY_parse_CLASS::DIGIT=259;
 
 
 #line 341 "/usr/share/bison++/bison.cc"
@@ -424,23 +426,14 @@ YY_parse_CONSTRUCTOR_CODE;
  #line 352 "/usr/share/bison++/bison.cc"
 
 
-#define	YYFINAL		25
+#define	YYFINAL		11
 #define	YYFLAG		-32768
-#define	YYNTBASE	12
+#define	YYNTBASE	6
 
-#define YYTRANSLATE(x) ((unsigned)(x) <= 258 ? yytranslate[x] : 18)
+#define YYTRANSLATE(x) ((unsigned)(x) <= 259 ? yytranslate[x] : 9)
 
 static const char yytranslate[] = {     0,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     4,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,    10,
-    11,     7,     5,     2,     6,     2,     8,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     9,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     5,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -456,80 +449,76 @@ static const char yytranslate[] = {     0,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
      2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-     2,     2,     2,     2,     2,     1,     2,     3
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+     2,     2,     2,     2,     2,     1,     2,     3,     4
 };
 
 #if YY_parse_DEBUG != 0
 static const short yyprhs[] = {     0,
-     0,     4,     5,     9,    13,    15,    19,    23,    25,    29,
-    31,    34,    36,    38
+     0,     3,     6,     8,    11,    14,    16
 };
 
-static const short yyrhs[] = {    12,
-    13,     4,     0,     0,    13,     5,    14,     0,    13,     6,
-    14,     0,    14,     0,    14,     7,    15,     0,    14,     8,
-    15,     0,    15,     0,    16,     9,    15,     0,    16,     0,
-     6,    16,     0,    17,     0,     3,     0,    10,    13,    11,
-     0
+static const short yyrhs[] = {     7,
+     5,     0,     3,     8,     0,     3,     0,     3,     8,     0,
+     4,     8,     0,     3,     0,     4,     0
 };
 
 #endif
 
 #if (YY_parse_DEBUG != 0) || defined(YY_parse_ERROR_VERBOSE) 
 static const short yyrline[] = { 0,
-    13,    19,    21,    22,    23,    25,    26,    35,    37,    46,
-    48,    49,    51,    52
+    14,    21,    22,    25,    26,    27,    28
 };
 
-static const char * const yytname[] = {   "$","error","$illegal.","NUMBER","'\\n'",
-"'+'","'-'","'*'","'/'","'^'","'('","')'","S","E","T","P","U","F",""
+static const char * const yytname[] = {   "$","error","$illegal.","LETTER","DIGIT",
+"'\\n'","L","S","A",""
 };
 #endif
 
 static const short yyr1[] = {     0,
-    12,    12,    13,    13,    13,    14,    14,    14,    15,    15,
-    16,    16,    17,    17
+     6,     7,     7,     8,     8,     8,     8
 };
 
 static const short yyr2[] = {     0,
-     3,     0,     3,     3,     1,     3,     3,     1,     3,     1,
-     2,     1,     1,     3
+     2,     2,     1,     2,     2,     1,     1
 };
 
-static const short yydefact[] = {     2,
-     0,    13,     0,     0,     0,     5,     8,    10,    12,    11,
-     0,     1,     0,     0,     0,     0,     0,    14,     3,     4,
-     6,     7,     9,     0,     0
+static const short yydefact[] = {     0,
+     3,     0,     6,     7,     2,     1,     4,     5,     0,     0,
+     0
 };
 
-static const short yydefgoto[] = {     1,
-     5,     6,     7,     8,     9
+static const short yydefgoto[] = {     9,
+     2,     5
 };
 
-static const short yypact[] = {-32768,
-     0,-32768,    -2,    -2,     9,    14,-32768,    -7,-32768,-32768,
-     6,-32768,    -2,    -2,    -2,    -2,    -2,-32768,    14,    14,
--32768,-32768,-32768,     5,-32768
+static const short yypact[] = {     1,
+    -3,     0,    -3,    -3,-32768,-32768,-32768,-32768,     6,     7,
+-32768
 };
 
 static const short yypgoto[] = {-32768,
-    12,    10,     3,     4,-32768
+-32768,    -1
 };
 
 
-#define	YYLAST		24
+#define	YYLAST		7
 
 
-static const short yytable[] = {    24,
-     2,    17,     2,     3,    25,     3,    10,     4,     0,     4,
-    13,    14,    12,    13,    14,    11,    18,    21,    22,    23,
-    15,    16,    19,    20
+static const short yytable[] = {     3,
+     4,     7,     8,     1,     6,    10,    11
 };
 
-static const short yycheck[] = {     0,
-     3,     9,     3,     6,     0,     6,     3,    10,    -1,    10,
-     5,     6,     4,     5,     6,     4,    11,    15,    16,    17,
-     7,     8,    13,    14
+static const short yycheck[] = {     3,
+     4,     3,     4,     3,     5,     0,     0
 };
 
 #line 352 "/usr/share/bison++/bison.cc"
@@ -1026,77 +1015,11 @@ YYLABEL(yyreduce)
   switch (yyn) {
 
 case 1:
-#line 13 "yacc2.y"
+#line 15 "yacc3.y"
 {
-        if (!error) {
-            printf("Result = %d\n", yyvsp[-1]);
-        }
-        error = 0;
+        printf("Valid Identifier\n");
+        return 0;
     ;
-    break;}
-case 3:
-#line 21 "yacc2.y"
-{ yyval = yyvsp[-2] + yyvsp[0]; ;
-    break;}
-case 4:
-#line 22 "yacc2.y"
-{ yyval = yyvsp[-2] - yyvsp[0]; ;
-    break;}
-case 5:
-#line 23 "yacc2.y"
-{ yyval = yyvsp[0]; ;
-    break;}
-case 6:
-#line 25 "yacc2.y"
-{ yyval = yyvsp[-2] * yyvsp[0]; ;
-    break;}
-case 7:
-#line 26 "yacc2.y"
-{
-        if (yyvsp[0] == 0) {
-            printf("Error: division by zero\n");
-            error = 1;
-            yyval = 0;
-        } else {
-            yyval = yyvsp[-2] / yyvsp[0];
-        }
-   ;
-    break;}
-case 8:
-#line 35 "yacc2.y"
-{ yyval = yyvsp[0]; ;
-    break;}
-case 9:
-#line 37 "yacc2.y"
-{
-        if (yyvsp[0] < 0) {
-            printf("Error: negative exponent is not supported\n");
-            error = 1;
-            yyval = 0;
-        } else {
-            yyval = power(yyvsp[-2], yyvsp[0]);
-        }
-   ;
-    break;}
-case 10:
-#line 46 "yacc2.y"
-{ yyval = yyvsp[0]; ;
-    break;}
-case 11:
-#line 48 "yacc2.y"
-{ yyval = -yyvsp[0]; ;
-    break;}
-case 12:
-#line 49 "yacc2.y"
-{ yyval = yyvsp[0]; ;
-    break;}
-case 13:
-#line 51 "yacc2.y"
-{ yyval = yyvsp[0]; ;
-    break;}
-case 14:
-#line 52 "yacc2.y"
-{ yyval = yyvsp[-1]; ;
     break;}
 }
 
@@ -1302,46 +1225,37 @@ YYLABEL(yyerrhandle)
 /* END */
 
  #line 1038 "/usr/share/bison++/bison.cc"
-#line 54 "yacc2.y"
+#line 31 "yacc3.y"
 
-int main(void)
-{
-    printf("Enter an expression: ");
-    return yyparse();
-}
 
 int yylex(void)
 {
-    int ch = getchar();
+    char c;
 
-    if (ch != EOF && isdigit((unsigned char) ch)) {
-        ungetc(ch, stdin);
-        scanf("%d", &yylval);
-        return NUMBER;
-    }
+    c = getchar();
 
-    return ch;
+    if (isalpha((unsigned char)c))
+        return LETTER;
+
+    if (isdigit((unsigned char)c))
+        return DIGIT;
+
+    if (c == '\n')
+        return '\n';
+
+    return c;
 }
 
-int yyerror(const char *message)
+int yyerror(char *s)
 {
-    (void) message;
-    printf("Invalid expression!\n");
-    error = 1;
+    printf("Invalid Identifier\n");
     return 0;
 }
 
-int power(int base, int exponent)
+int main(void)
 {
-    int result = 1;
+    printf("Enter an identifier: ");
+    yyparse();
 
-    while (exponent > 0) {
-        if (exponent % 2 == 1) {
-            result *= base;
-        }
-        base *= base;
-        exponent /= 2;
-    }
-
-    return result;
+    return 0;
 }

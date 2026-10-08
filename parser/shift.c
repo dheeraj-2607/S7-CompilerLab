@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char inp[20];
+    char inp[21];
     char stack[50] = "";
     const char *left[] = {"E", "E", "E", "E"};
     const char *right[] = {"E+E", "E*E", "(E)", "i"};
@@ -18,9 +18,12 @@ int main(void)
     if (scanf("%19s", inp) != 1)
         return 1;
 
+    strcat(inp, "$ ");
+    inp[strlen(inp) - 1] = '\0';
+
     printf("Stack\tinp\tAction\n");
 
-    while (posi < strlen(inp)) {
+    while (posi < strlen(inp) - 1) {
         size_t stklen;
         char shifted[2] = {inp[posi++], '\0'};
 

@@ -1,95 +1,104 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define MAX 100
-char stack[MAX];
-int top = -1;
-int pop() {
-    if (top == -1)
-        return 0;
-    return stack[top--];
-}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-void push(char val) {
-    if (top == MAX - 1) {
-        printf("Stack Overflow\n");
-        return;
+int main(int argc, char *argv[]){
+    FILE *fp;
+    char line[500];
+    char *p;
+    int found = 0;
+    int forno = 0;
+
+    printf("Hi I'm Dheeraj A G.Here is my output for loop syntax checking.\n\n");
+    if (argc < 2){
+        printf(" Input file not specified.\n");
+        printf(" %s <input_file>\n", argv[0]);
+        return 1;
     }
-    stack[++top] = val;
-}
-void main(int argc,char *argv[]){
-    char ch;
-    int flag = 0;
-    int count = 0;
-    FILE *fp = fopen(argv[1],"r");
-    if(fp == NULL){
-        printf("File not found\n");
-        return;
+    fp = fopen(argv[1], "r");
+
+    if (fp == NULL){
+        printf("Cannot open file '%s'.\n", argv[1]);
+        return 1;
     }
-    printf("I'm Dheeraj A G.This is my output for 'for loop' syntax check\n");
-    printf("\n");
-    while((ch = fgetc(fp)) != EOF){
-        if(ch == 'f'){
-            push(ch);
-            ch = fgetc(fp);
-            if(ch == 'o'){
-                push(ch);
-                ch = fgetc(fp);
-                if(ch == 'r'){
-                    push(ch);
-                    ch = fgetc(fp);
-                    if (ch == '('){
-                        push(ch);
-                        while ((ch = fgetc(fp)) != ')' && ch != '\n'){
-                            if(ch == ';'){
-                                push(ch);
-                                count++;
-                            }
-                               
-                        }
-                         if(count != 2){
-                            flag = 3;
-                      } 
-                        if(ch == ')'){
-                            push(ch);
-                        }
-                        else{
-                            flag = 2;
-                        }   
-                    }
-                    else if(ch != '('){
-                        printf("for loop is present \n'(' is not used immediate after 'for'\n");
-                        exit(1);
-                    } 
-                    
+
+    while (fgets(line, sizeof(line), fp) != NULL){
+        p = line;
+
+        while ((p = strstr(p, "for")) != NULL){
+            if ((p == line || !isalnum(*(p - 1))) &&
+                !isalnum(*(p + 3)) && *(p + 3) != '_'){
+                int semicolon = 0;
+                int open = 0;
+                int close = 0;
+                int error = 0;
+                int i;
+
+                found = 1;
+                forno++;
+
+                printf("for loop %d:", forno);
+
+                p = p + 3;
+
+                while (isspace(*p))
+                    p++;
+
+                /* Check '(' */
+                if (*p != '('){
+                    printf(" '(' is missing after 'for'.\n");
+                    error = 1;
+
+                    p++;
+                    printf("\n");
+                    continue;
                 }
-                printf("for loop is present in the file\n");
-                flag = 1;
-            }  
-            else if(ch != 'o'){
-                 pop();
+
+                open = 1;
+                p++;
+
+                for (i = 0; p[i] != '\0'; i++){
+                    if (p[i] == ';')
+                        semicolon++;
+
+                    if (p[i] == '(')
+                        open++;
+
+                    if (p[i] == ')'){
+                        open--;
+
+                        if (open == 0){
+                            close = 1;
+                            break;
+                        }
+                    }
+                }
+                if (!close){
+                    printf(" ')' is missing.\n");
+                    error = 1;
+                }
+                if (semicolon != 2){
+                    printf("  Expected 2 semicolons inside "
+                           "'for' brackets, found %d.\n",
+                           semicolon);
+                    error = 1;
+                }
+
+                if (!error){
+                    printf("  For loop syntax is OK.\n");
+                }
+
+                printf("\n");
             }
+
+            p = p + 3;
         }
     }
-    if(flag == 1){
-        if(stack[top]!=')'){
-            printf("')' is missing at the end\n");
-        }
-        else if(stack[top] == ')'){
-            flag = 4;
-        }
-        if(count !=2){
-            printf("; is missing or not properly used\n");
-            exit(1);
-        }
-        else if(flag == 4){
-            printf("for loop is correctly implemented\n");
-        }
-        if(flag == 0) {
-        printf("for loop is not present or incorrectly used\n");
-        }
-    }
-    else{
-        printf("for loop is not present\n");
-    }    
+
     fclose(fp);
+    if (!found)
+        printf("'for' loop is not present.\n");
+
+    return 0;
 }

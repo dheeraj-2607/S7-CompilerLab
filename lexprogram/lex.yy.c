@@ -443,9 +443,9 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "lex3.l"
 #line 2 "lex3.l"
-    #include<stdio.h>
-    FILE *fp1,*fp2;
-    int flag = 0;
+#include <stdio.h>
+FILE *fp1, *fp2;
+int flag = 0;
 #line 450 "lex.yy.c"
 #line 451 "lex.yy.c"
 
@@ -664,7 +664,7 @@ YY_DECL
 		}
 
 	{
-#line 7 "lex3.l"
+#line 9 "lex3.l"
 
 #line 670 "lex.yy.c"
 
@@ -725,38 +725,38 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "lex3.l"
-{}
+#line 10 "lex3.l"
+{ }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "lex3.l"
-{flag = 1;}
+#line 11 "lex3.l"
+{ flag = 1; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "lex3.l"
-{flag = 2;}
+#line 12 "lex3.l"
+{ flag = 2; }
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 11 "lex3.l"
-{if (flag == 1)flag = 0;}
+#line 13 "lex3.l"
+{ if (flag == 1) flag = 0; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "lex3.l"
-{if (flag == 2)flag = 0;}
+#line 14 "lex3.l"
+{ if (flag == 2) flag = 0; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "lex3.l"
-{if (flag == 0)fprintf(fp2,"%s",yytext);}
+#line 15 "lex3.l"
+{ if (flag == 0) fprintf(fp2, "%s", yytext); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 14 "lex3.l"
+#line 17 "lex3.l"
 ECHO;
 	YY_BREAK
 #line 763 "lex.yy.c"
@@ -1764,16 +1764,19 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 14 "lex3.l"
+#line 17 "lex3.l"
 
-void main(int argc,char* argv[]){
-    fp1=fopen(argv[1],"r");
-    yyin=fp1;
-    fp2=fopen(argv[2],"w");
+
+void main(int argc, char *argv[]) {
+    fp1 = fopen(argv[1], "r");
+    yyin = fp1;
+    fp2 = fopen(argv[2], "w");
     yylex();
     fclose(fp1);
     fclose(fp2);
+    printf("Output file created successfully.\n");
 }
-int yywrap(){
+
+int yywrap() {
     return 1;
 }

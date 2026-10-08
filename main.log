@@ -1,0 +1,372 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.7.5)  7 OCT 2026 22:03
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex
+(c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count286
+\lst@gtempboxa=\box53
+\lst@token=\toks19
+\lst@length=\count287
+\lst@currlwidth=\dimen157
+\lst@column=\count288
+\lst@pos=\count289
+\lst@lostspace=\dimen158
+\lst@width=\dimen159
+\lst@newlines=\count290
+\lst@lineno=\count291
+\lst@maxwidth=\dimen160
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
+\lst@framebox=\box54
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count294
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 284.52757pt, 113.81102pt)
+* v-part:(T,H,B)=(28.45274pt, 540.60237pt, 113.81102pt)
+* \paperwidth=426.79134pt
+* \paperheight=682.86613pt
+* \textwidth=284.52757pt
+* \textheight=540.60237pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count295
+(C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count296
+\scratchdimen=\dimen163
+\scratchbox=\box55
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen164
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks21
+) (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\hp\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 52.
+ [1
+
+{C:/Users/hp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+<outs/exp1.png, id=11, 569.7285pt x 308.352pt>
+File: outs/exp1.png Graphic file (type png)
+<use outs/exp1.png>
+Package pdftex.def Info: outs/exp1.png  used on input line 146.
+(pdftex.def)             Requested size: 284.52757pt x 153.99211pt.
+ [3 <./outs/exp1.png>] [4]
+<outs/exp2.png, id=20, 657.05475pt x 86.12175pt>
+File: outs/exp2.png Graphic file (type png)
+<use outs/exp2.png>
+Package pdftex.def Info: outs/exp2.png  used on input line 274.
+(pdftex.def)             Requested size: 284.52757pt x 37.29445pt.
+ [5 <./outs/exp2.png>] [6] [7] [8]
+<outs/exp3.png, id=35, 643.203pt x 80.09924pt>
+File: outs/exp3.png Graphic file (type png)
+<use outs/exp3.png>
+Package pdftex.def Info: outs/exp3.png  used on input line 529.
+(pdftex.def)             Requested size: 284.52757pt x 35.4332pt.
+ [9] [10 <./outs/exp3.png>] [11]
+<outs/exp4.png, id=46, 575.751pt x 117.43875pt>
+File: outs/exp4.png Graphic file (type png)
+<use outs/exp4.png>
+Package pdftex.def Info: outs/exp4.png  used on input line 618.
+(pdftex.def)             Requested size: 284.52757pt x 58.03827pt.
+ [12 <./outs/exp4.png>] [13] [14] [15] [16]
+<outs/exp5.png, id=65, 487.8225pt x 552.26324pt>
+File: outs/exp5.png Graphic file (type png)
+<use outs/exp5.png>
+Package pdftex.def Info: outs/exp5.png  used on input line 839.
+(pdftex.def)             Requested size: 284.52757pt x 322.11624pt.
+<outs/exp5(2).png, id=66, 532.99126pt x 551.661pt>
+File: outs/exp5(2).png Graphic file (type png)
+<use outs/exp5(2).png>
+Package pdftex.def Info: outs/exp5(2).png  used on input line 844.
+(pdftex.def)             Requested size: 284.52757pt x 294.50018pt.
+ [17 <./outs/exp5.png>] [18 <./outs/exp5(2).png>] [19] [20] [21]
+<outs/exp6.png, id=85, 504.08325pt x 193.9245pt>
+File: outs/exp6.png Graphic file (type png)
+<use outs/exp6.png>
+Package pdftex.def Info: outs/exp6.png  used on input line 1011.
+(pdftex.def)             Requested size: 284.52757pt x 109.46396pt.
+ [22 <./outs/exp6.png>] [23] [24]
+<outs/exp7.png, id=96, 498.06075pt x 224.037pt>
+File: outs/exp7.png Graphic file (type png)
+<use outs/exp7.png>
+Package pdftex.def Info: outs/exp7.png  used on input line 1212.
+(pdftex.def)             Requested size: 284.52757pt x 127.99298pt.
+ [25] [26 <./outs/exp7.png>]
+
+c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex:1266: LaTeX Error: Invalid UTF-8 byte sequence (â\lst@EC†\lst@EC’).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266     printf("E â†’ 
+                         E+E âˆ£ Eâˆ—E âˆ£ (E) âˆ£ i\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex:1266: LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC£).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266     printf("E â†’ E+E âˆ£ 
+                                 Eâˆ—E âˆ£ (E) âˆ£ i\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex:1266: LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC—).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266     printf("E â†’ E+E âˆ£ Eâˆ—E 
+                                       âˆ£ (E) âˆ£ i\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex:1266: LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC£).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266     printf("E â†’ E+E âˆ£ Eâˆ—E âˆ£ 
+                                           (E) âˆ£ i\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/hp/OneDrive/Desktop/S7Lab/main.tex:1266: LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC£).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266 ...printf("E â†’ E+E âˆ£ Eâˆ—E âˆ£ (E) âˆ£ 
+                                                  i\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[27]
+<outs/exp8.png, id=108, 504.6855pt x 413.74574pt>
+File: outs/exp8.png Graphic file (type png)
+<use outs/exp8.png>
+Package pdftex.def Info: outs/exp8.png  used on input line 1343.
+(pdftex.def)             Requested size: 284.52757pt x 233.26804pt.
+ [28] [29 <./outs/exp8.png>] [30] [31]
+<outs/exp9.png, id=123, 446.8695pt x 581.17125pt>
+File: outs/exp9.png Graphic file (type png)
+<use outs/exp9.png>
+Package pdftex.def Info: outs/exp9.png  used on input line 1437.
+(pdftex.def)             Requested size: 284.52757pt x 370.05946pt.
+ [32 <./outs/exp9.png>] [33]
+<outs/exp10.png, id=131, 688.37175pt x 87.9285pt>
+File: outs/exp10.png Graphic file (type png)
+<use outs/exp10.png>
+Package pdftex.def Info: outs/exp10.png  used on input line 1538.
+(pdftex.def)             Requested size: 284.52757pt x 36.34473pt.
+ [34 <./outs/exp10.png>] [35]
+<outs/exp11.png, id=139, 769.6755pt x 88.53075pt>
+File: outs/exp11.png Graphic file (type png)
+<use outs/exp11.png>
+Package pdftex.def Info: outs/exp11.png  used on input line 1643.
+(pdftex.def)             Requested size: 284.52757pt x 32.72748pt.
+ [36 <./outs/exp11.png>] [37]
+<outs/exp12.png, id=148, 695.59875pt x 96.36pt>
+File: outs/exp12.png Graphic file (type png)
+<use outs/exp12.png>
+Package pdftex.def Info: outs/exp12.png  used on input line 1730.
+(pdftex.def)             Requested size: 284.52757pt x 39.4152pt.
+ [38 <./outs/exp12.png>] [39]
+<outs/exp13.png, id=156, 703.428pt x 91.542pt>
+File: outs/exp13.png Graphic file (type png)
+<use outs/exp13.png>
+Package pdftex.def Info: outs/exp13.png  used on input line 1863.
+(pdftex.def)             Requested size: 284.52757pt x 37.02821pt.
+ [40 <./outs/exp13.png>] [41]
+<outs/exp14.png, id=164, 699.21225pt x 156.585pt>
+File: outs/exp14.png Graphic file (type png)
+<use outs/exp14.png>
+Package pdftex.def Info: outs/exp14.png  used on input line 1957.
+(pdftex.def)             Requested size: 284.52757pt x 63.72pt.
+ [42 <./outs/exp14.png>] [43] [44] [45] [46]
+<outs/exp15.png, id=182, 582.37575pt x 407.121pt>
+File: outs/exp15.png Graphic file (type png)
+<use outs/exp15.png>
+Package pdftex.def Info: outs/exp15.png  used on input line 2179.
+(pdftex.def)             Requested size: 284.52757pt x 198.9133pt.
+ [47 <./outs/exp15.png>] [48] [49] [50]
+<outs/exp16.png, id=197, 620.3175pt x 474.573pt>
+File: outs/exp16.png Graphic file (type png)
+<use outs/exp16.png>
+Package pdftex.def Info: outs/exp16.png  used on input line 2338.
+(pdftex.def)             Requested size: 284.52757pt x 217.67622pt.
+ [51 <./outs/exp16.png>] (main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 3589 strings out of 467867
+ 54150 string characters out of 5419787
+ 700094 words of memory out of 5000000
+ 32489 multiletter control sequences out of 15000+600000
+ 628961 words of font info for 45 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,216b,1633s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\hp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk><C:/Users/hp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/hp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on main.pdf (51 pages, 599991 bytes).
+PDF statistics:
+ 222 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -23,6 +23,7 @@ void main(int argc,char* argv[]){
     yyin=fopen(argv[1],"r");
     printf("slno\tlexeme\ttoken\tlineno");
     yylex();
+    printf("\n");
 }
 int yywrap(){
     return 1;

@@ -43,14 +43,14 @@ DIGIT [0-9]
     if (!error && have_number) {
         printf("Result = %d\n", result);
     } else if (!have_number && !error) {
-        printf("Error: enter an expression\n");
+        printf("enter an expression!!!\n");
     }
     reset_calculator();
 }
 . {printf("Error: invalid character '%s'\n", yytext); error = 1;}
 %%
 int main(void){
-    printf("Enter an expression (use +, -, * or /):\n");
+    printf("Enter an expression (use +, -, * or /):");
     yylex();
     return 0;
 }
